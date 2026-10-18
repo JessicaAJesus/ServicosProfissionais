@@ -61,6 +61,11 @@ hr {
     --bs-table-bg: #308a962e;
 }
 
+.form-check-input:checked {
+    background-color: #308a96;
+    border-color: #308a96;
+}
+
 /* Transição para botões da seção inicial da homepage */
 .btn-home {
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
