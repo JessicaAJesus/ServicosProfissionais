@@ -359,72 +359,91 @@ header .navbar-toggler:focus {
 }
 
 
-
-/* FOOTER */
-
 .footer-site {
-    background-color: #244766;
-    color: white;
-    padding: 40px 50px 15px;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px 5% 18px;
+    box-sizing: border-box;
+
+    background-color: #0d6efd;
+    color: #ffffff;
+    text-align: center;
 }
 
 .footer-conteudo {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.footer-marca {
-    max-width: 250px;
-}
-
 .footer-marca h2 {
-    font-size: 26px;
-    margin-bottom: 12px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.footer-marca p {
-    color: #d6ebff;
-    line-height: 1.6;
-}
-
-.footer-site h3 {
-    font-size: 17px;
-    margin-bottom: 12px;
-}
-
-.footer-links,
-.footer-contato,
 .footer-redes {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
 }
 
-.footer-site a {
-    color: #d6ebff;
+.footer-redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 25px;
     text-decoration: none;
-    transition: color 0.3s;
+
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.footer-site a:hover {
-    color: white;
+.footer-redes a:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.75;
     text-decoration: underline;
 }
 
 .footer-final {
     max-width: 1200px;
-    margin: 30px auto 0;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 18px auto 0;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    color: #ffffff;
     text-align: center;
     font-size: 14px;
-    color: #d6ebff;
 }
 
 .footer-final p {
