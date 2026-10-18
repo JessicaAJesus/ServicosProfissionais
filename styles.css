@@ -1,0 +1,52 @@
+/* Alternância Pessoa Física / Pessoa Jurídica */
+#opcPF:checked ~ #camposPJ,
+#opcPJ:checked ~ #camposPF {
+    display: none;
+}
+
+/* Filtro por categoria na tabela de preços */
+#filtroLimpeza:checked ~ .categoria:not(#limpeza),
+#filtroConsertos:checked ~ .categoria:not(#consertos),
+#filtroJardinagem:checked ~ .categoria:not(#jardinagem),
+#filtroInstalacao:checked ~ .categoria:not(#instalacao) {
+    display: none;
+}
+
+/* Muda a cor do botão do filtro quando selecionado*/
+#filtroTodos:checked ~ section .filtro label[for="filtroTodos"],
+#filtroLimpeza:checked ~ section .filtro label[for="filtroLimpeza"],
+#filtroConsertos:checked ~ section .filtro label[for="filtroConsertos"],
+#filtroJardinagem:checked ~ section .filtro label[for="filtroJardinagem"],
+#filtroInstalacao:checked ~ section .filtro label[for="filtroInstalacao"] {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+:root {
+    --bs-body-font-family: "Glacial Indifference", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Adiciona asterisco vermelho nos labels de campos obrigatórios 
+    Só em Contato e Sobre o serviço (PF e PJ posteriormente com JS) */
+label:has(+ input[required]),
+label:has(+ select[required]),
+label:has(+ textarea[required]) {
+    position: relative;
+}
+
+label:has(+ input[required])::after,
+label:has(+ select[required])::after,
+label:has(+ textarea[required])::after {
+    content: " *";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Se o checkbox #termos NÃO estiver marcado, desabilita o botão de envio */
+form:has(#termos:not(:checked)) button[type="submit"] {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    opacity: 0.65;
+    pointer-events: none;
+    cursor: not-allowed;
+}

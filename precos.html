@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Preços | Servcaz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/typeface-glacial-indifference@1.1.14/index.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-nowrap">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+                        <li class="nav-item"><a href="orcamento.html" class="nav-link text-nowrap">Solicite um
+                                Orçamento</a></li>
+                        <li class="nav-item"><a href="precos.html" class="nav-link text-nowrap active"
+                                aria-current="page">Tabela de Preços</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Rádios do filtro -->
+        <input type="radio" class="btn-check" name="categoria" id="filtroTodos" autocomplete="off" checked>
+        <input type="radio" class="btn-check" name="categoria" id="filtroLimpeza" autocomplete="off">
+        <input type="radio" class="btn-check" name="categoria" id="filtroConsertos" autocomplete="off">
+        <input type="radio" class="btn-check" name="categoria" id="filtroJardinagem" autocomplete="off">
+        <input type="radio" class="btn-check" name="categoria" id="filtroInstalacao" autocomplete="off">
+
+        <!-- Título -->
+        <section class="bg-info-subtle">
+            <div class="container py-5 text-center">
+                <h1 class="fw-bold">Tabela de Preços</h1>
+                <p class="mb-0">Valores de referência para os serviços mais pedidos.</p>
+                <p> O preço final depende do tamanho e da complexidade do trabalho.</p>
+            </div>
+            <hr class="m-0">
+        </section>
+
+        <!-- Filtro por categoria -->
+        <section class="py-4 border-bottom">
+            <div class="container text-center">
+                <p class="mb-2">Escolha uma categoria:</p>
+                <div class="filtro d-flex flex-wrap justify-content-center gap-2">
+                    <label class="btn btn-outline-primary" for="filtroTodos">Todos</label>
+                    <label class="btn btn-outline-primary" for="filtroLimpeza">Limpeza</label>
+                    <label class="btn btn-outline-primary" for="filtroConsertos">Conserto</label>
+                    <label class="btn btn-outline-primary" for="filtroJardinagem">Jardinagem</label>
+                    <label class="btn btn-outline-primary" for="filtroInstalacao">Instalação</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limpeza -->
+        <section id="limpeza" class="categoria py-5 border-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="text-center h4 mb-3">Limpeza</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover align-middle">
+                                <caption class="visually-hidden">Preços dos serviços de limpeza</caption>
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th scope="col">Serviço</th>
+                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Unidade</th>
+                                        <th scope="col" class="text-end">A partir de</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Limpeza residencial</th>
+                                        <td>Higienização completa de cômodos, banheiros e cozinha.</td>
+                                        <td>Diária</td>
+                                        <td class="text-end text-nowrap">R$ 180,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Limpeza pós-obra</th>
+                                        <td>Remoção de resíduos, tintas e poeira fina.</td>
+                                        <td>m²</td>
+                                        <td class="text-end text-nowrap">R$ 20,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Limpeza de escritório</th>
+                                        <td>Limpeza e desinfecção de mesas, pisos e áreas comuns.</td>
+                                        <td>Visita</td>
+                                        <td class="text-end text-nowrap">R$ 220,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Higienização de estofados</th>
+                                        <td>Limpeza a seco ou com extração de sofás e colchões.</td>
+                                        <td>Peça</td>
+                                        <td class="text-end text-nowrap">R$ 150,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                        <!-- Imagem Limpeza -->
+                        <figure class="mt-4 mb-0">
+                            <div class="ratio ratio-21x9 rounded-4 overflow-hidden">
+                                <img src="imagens/limpeza.png" class="object-fit-cover" alt="Imagem de Limpeza">
+                            </div>
+                        </figure>
+
+                        <!-- Botão -->
+                        <div class="text-center my-4">
+                            <a href="orcamento.html" class="btn btn-primary btn-lg px-4">Solicitar este serviço</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consertos -->
+        <section id="consertos" class="categoria py-5 border-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="text-center h4 mb-3">Conserto</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover align-middle">
+                                <caption class="visually-hidden">Preços dos serviços de consertos</caption>
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th scope="col">Serviço</th>
+                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Unidade</th>
+                                        <th scope="col" class="text-end">A partir de</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Reparo hidráulico</th>
+                                        <td>Vazamentos, troca de torneiras, sifões e registros.</td>
+                                        <td>Visita</td>
+                                        <td class="text-end text-nowrap">R$ 120,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Reparo elétrico</th>
+                                        <td>Troca de tomadas, interruptores e disjuntores.</td>
+                                        <td>Visita</td>
+                                        <td class="text-end text-nowrap">R$ 130,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Pequenos reparos</th>
+                                        <td>Ajuste de portas, dobradiças, fechaduras e gesso.</td>
+                                        <td>Hora</td>
+                                        <td class="text-end text-nowrap">R$ 70,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <!-- Imagem Conserto -->
+                        <figure class="mt-4 mb-0">
+                            <div class="ratio ratio-21x9 rounded-4 overflow-hidden">
+                                <img src="imagens/conserto.png" class="object-fit-cover" alt="Imagem de Conserto">
+                            </div>
+                        </figure>
+
+                        <!-- Botão -->
+                        <div class="text-center my-4">
+                            <a href="orcamento.html" class="btn btn-primary btn-lg px-4">Solicitar este serviço</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jardinagem -->
+        <section id="jardinagem" class="categoria py-5 border-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="text-center h4 mb-3">Jardinagem</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover align-middle">
+                                <caption class="visually-hidden">Preços dos serviços de jardinagem</caption>
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th scope="col">Serviço</th>
+                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Unidade</th>
+                                        <th scope="col" class="text-end">A partir de</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Corte de grama</th>
+                                        <td>Corte e recolhimento de resíduos.</td>
+                                        <td>m²</td>
+                                        <td class="text-end text-nowrap">R$ 2,50</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Poda de arbustos</th>
+                                        <td>Poda de formação e manutenção de cercas-vivas.</td>
+                                        <td>Hora</td>
+                                        <td class="text-end text-nowrap">R$ 65,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Manutenção mensal</th>
+                                        <td>Visitas periódicas com rega, adubação e limpeza.</td>
+                                        <td>Mês</td>
+                                        <td class="text-end text-nowrap">R$ 280,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Imagem Jardinagem -->
+                        <figure class="mt-4 mb-0">
+                            <div class="ratio ratio-21x9 rounded-4 overflow-hidden">
+                                <img src="imagens/jardinagem.png" class="object-fit-cover" alt="Imagem de Jardinagem">
+                            </div>
+                        </figure>
+
+                        <!-- Botão -->
+                        <div class="text-center my-4">
+                            <a href="orcamento.html" class="btn btn-primary btn-lg px-4">Solicitar este serviço</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instalação -->
+        <section id="instalacao" class="categoria py-5 border-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="text-center h4 mb-3">Instalação</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover align-middle">
+                                <caption class="visually-hidden">Preços dos serviços de instalação</caption>
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th scope="col">Serviço</th>
+                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Unidade</th>
+                                        <th scope="col" class="text-end">A partir de</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Montagem de móveis</th>
+                                        <td>Guarda-roupas, estantes, camas e mesas.</td>
+                                        <td>Móvel</td>
+                                        <td class="text-end text-nowrap">R$ 90,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Fixação de suportes</th>
+                                        <td>TVs, prateleiras, nichos e quadros.</td>
+                                        <td>Item</td>
+                                        <td class="text-end text-nowrap">R$ 80,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Instalação de luminárias</th>
+                                        <td>Pendentes, plafons e spots, com teste de funcionamento.</td>
+                                        <td>Ponto</td>
+                                        <td class="text-end text-nowrap">R$ 80,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Instalação de eletrodomésticos</th>
+                                        <td>Fogões, coifas e máquinas de lavar.</td>
+                                        <td>Aparelho</td>
+                                        <td class="text-end text-nowrap">R$ 150,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Instalação de ar-condicionado split</th>
+                                        <td>Split de até 12.000 BTUs, com até 3 m de tubulação, vácuo e teste.</td>
+                                        <td>Aparelho</td>
+                                        <td class="text-end text-nowrap">R$ 650,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Imagem Instalação -->
+                        <figure class="mt-4 mb-0">
+                            <div class="ratio ratio-21x9 rounded-4 overflow-hidden">
+                                <img src="imagens/instalacao.png" class="object-fit-cover" alt="Imagem de Instalação">
+                            </div>
+                        </figure>
+
+                        <!-- Botão -->
+                        <div class="text-center my-4">
+                            <a href="orcamento.html" class="btn btn-primary btn-lg px-4">Solicitar este serviço</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Observações / outro serviço -->
+        <section class="py-5 bg-info-subtle">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="h4">Não achou o que procurava?</h2>
+                        <p>Os valores são estimativas e podem variar conforme a região, os materiais e o prazo.
+                            Peça um orçamento e receba uma proposta personalizada.</p>
+                        <p class="small text-muted">Valores de referência atualizados em outubro de 2026, com base
+                            no mercado da região de São Paulo. O preço final é definido após avaliação do serviço.</p>
+                        <a href="orcamento.html" class="btn btn-primary" role="button">Solicite um Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-primary text-white p-3 text-center">
+        <div class="container text-center">
+            <h5>Servcaz</h5>
+            <div class="d-flex justify-content-center gap-3 mb-4 fs-4">
+                <a class="link-light" href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"
+                        aria-hidden="true"></i></a>
+                <a class="link-light" href="#" aria-label="Instagram"><i class="bi bi-instagram"
+                        aria-hidden="true"></i></a>
+                <a class="link-light" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"
+                        aria-hidden="true"></i></a>
+                <a class="link-light" href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            </div>
+            <ul class="list-inline small mb-3">
+                <li class="list-inline-item"><a class="link-light text-decoration-none" href="#">Sobre Nós</a></li>
+                <li class="list-inline-item mx-3"><a class="link-light text-decoration-none"
+                        href="index.html#servicos">Serviços</a></li>
+                <li class="list-inline-item"><a class="link-light text-decoration-none"
+                        href="orcamento.html">Orçamento</a></li>
+                <li class="list-inline-item mx-3"><a class="link-light text-decoration-none"
+                        href="precos.html">Preços</a></li>
+            </ul>
+        </div>
+        <hr>
+        <span class="text-body-light small">&copy; 2026 Servcaz Ltda. Todos os direitos reservados.</span>
+    </footer>
+
+    <!-- Script JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
