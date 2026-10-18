@@ -1,3 +1,116 @@
+:root {
+    --bs-body-font-family: "Glacial Indifference", sans-serif, -apple-system, "Segoe UI", Roboto;
+    color: #223f45;
+}
+
+hr {
+    color: #fbcc58;
+}
+
+/* Altera o estilo padrão do bootstrap*/
+.bg-primary {
+    background-color: #308a96 !important;
+}
+
+.btn-primary {
+    --bs-btn-color: #223f45;
+    --bs-btn-bg: #fbcc58;
+    --bs-btn-border-color: #fbcc58;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #fbcc58;
+    --bs-btn-hover-border-color: #fbcc58;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #fbcc58;
+    --bs-btn-active-border-color: #fbcc58;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #fbcc58;
+    --bs-btn-disabled-border-color: #fbcc58;
+}
+
+
+.btn-secondary {
+    --bs-btn-color: #223f45;
+    --bs-btn-bg: #c8e9f2;
+    --bs-btn-border-color: #c8e9f2;
+    --bs-btn-hover-color: #223f457e;
+    --bs-btn-hover-bg: #c8e9f2;
+    --bs-btn-hover-border-color: #c8e9f2;
+    --bs-btn-active-color: #223f45;
+    --bs-btn-active-bg: #c8e9f2;
+    --bs-btn-active-border-color: #c8e9f2;
+    --bs-btn-disabled-color: #223f45;
+    --bs-btn-disabled-bg: #c8e9f2;
+    --bs-btn-disabled-border-color: #c8e9f2;
+    
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #308a96;
+    --bs-btn-border-color: #308a96;
+    --bs-btn-hover-bg: #308a96;
+    --bs-btn-hover-border-color: #308a96;
+    --bs-btn-active-bg: #308a96;
+    --bs-btn-active-border-color: #308a96;
+    --bs-btn-disabled-color: #308a96;
+    --bs-btn-disabled-border-color: #308a96;
+}
+
+.table-primary {
+    --bs-table-bg: #308a962e;
+}
+
+/* Transição para botões da seção inicial da homepage */
+.btn-home {
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.btn-home:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+/* Card de serviços da homepage */
+.card-servico .card {
+    background-color: #1c5056;
+}
+
+.card-servico:hover {
+    transform: scale(1.05);
+    transition: linear 300ms;
+}
+
+.card-img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+@media only screen and (min-width: 576px) and (max-width:992px){
+    .card-img-overlay > .card-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:360px){
+    .card-img-overlay > .card-text {
+        display: none;
+    }
+}
+
+/* Define a cor e posição do marcador de details no F.A.Q. */
+.faq summary {
+    list-style-position: outside;
+    margin-left: 30px;
+    -webkit-user-select:none;
+    user-select:none;
+}
+
+.faq summary::marker {
+    color: #308a96;
+}
+
 /* Alternância Pessoa Física / Pessoa Jurídica */
 #opcPF:checked ~ #camposPJ,
 #opcPJ:checked ~ #camposPF {
@@ -18,13 +131,11 @@
 #filtroConsertos:checked ~ section .filtro label[for="filtroConsertos"],
 #filtroJardinagem:checked ~ section .filtro label[for="filtroJardinagem"],
 #filtroInstalacao:checked ~ section .filtro label[for="filtroInstalacao"] {
-    background-color: #0d6efd;
+    background-color: #308a96;
     color: #fff;
+    border-color: #308a96;
 }
 
-:root {
-    --bs-body-font-family: "Glacial Indifference", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
 
 /* Adiciona asterisco vermelho nos labels de campos obrigatórios 
     Só em Contato e Sobre o serviço (PF e PJ posteriormente com JS) */
@@ -44,8 +155,6 @@ label:has(+ textarea[required])::after {
 
 /* Se o checkbox #termos NÃO estiver marcado, desabilita o botão de envio */
 form:has(#termos:not(:checked)) button[type="submit"] {
-    background-color: #6c757d !important;
-    border-color: #6c757d !important;
     opacity: 0.65;
     pointer-events: none;
     cursor: not-allowed;
