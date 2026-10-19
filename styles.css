@@ -7,6 +7,10 @@ hr {
     color: #fbcc58;
 }
 
+strong {
+    font-weight: 600;
+}
+
 /* Altera o estilo padrão do bootstrap*/
 .bg-primary {
     background-color: #308a96 !important;
@@ -86,7 +90,7 @@ hr {
     transition: linear 300ms;
 }
 
-.card-img {
+.card-servico .card-img {
     height: 100%;
     object-fit: cover;
     opacity: 0.4;
@@ -104,6 +108,11 @@ hr {
     }
 }
 
+/* Vídeo da homepage */
+.video-home {
+    max-width: 700px;
+}
+
 /* Define a cor e posição do marcador de details no F.A.Q. */
 .faq summary {
     list-style-position: outside;
@@ -114,6 +123,15 @@ hr {
 
 .faq summary::marker {
     color: #308a96;
+}
+
+/* Títulos da página Sobre Nós */
+.marcatexto {
+    background: linear-gradient(180deg, transparent 55%, #fbcc58 60%);
+    border-radius: 4px;
+    display: inline;
+    width: fit-content;
+    padding: 0 14px;
 }
 
 /* Alternância Pessoa Física / Pessoa Jurídica */
