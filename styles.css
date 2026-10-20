@@ -188,6 +188,7 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 /* SERVIÇOS */
 
 
+
 .container-principal {
     padding: 50px;
     background-color: #D6EBFF;
@@ -504,96 +505,11 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 }
 
 
-.footer-site {
-    width: 100%;
-    margin-top: 30px;
-    padding: 16px 5% 18px;
-    box-sizing: border-box;
 
-    background-color: #0d6efd;
-    color: #ffffff;
-    text-align: center;
+
+
+header, nav, .navbar {
+    font-family: var(--bs-body-font-family) !important;
 }
-
-.footer-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-marca h2 {
-    margin: 0;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.footer-redes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-}
-
-.footer-redes a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #ffffff;
-    font-size: 25px;
-    text-decoration: none;
-
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.footer-redes a:hover {
-    opacity: 0.75;
-    transform: translateY(-2px);
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 26px;
-}
-
-.footer-links a {
-    color: #ffffff;
-    font-size: 14px;
-    text-decoration: none;
-
-    transition: opacity 0.2s ease;
-}
-
-.footer-links a:hover {
-    opacity: 0.75;
-    text-decoration: underline;
-}
-
-.footer-final {
-    max-width: 1200px;
-    margin: 18px auto 0;
-    padding-top: 18px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.35);
-
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-}
-
-.footer-final p {
-    margin: 0;
-}
-
 
 
