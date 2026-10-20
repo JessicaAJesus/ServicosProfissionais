@@ -188,10 +188,9 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 /* SERVIÇOS */
 
 
-
 .container-principal {
     padding: 50px;
-    background-color: #D6EBFF;
+    background-color: #cff4fc;
 }
 
 
@@ -206,7 +205,7 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     padding: 0 18px;
 
     background-color: #fff;
-    border: 1px solid #dbe5ee;
+    border: 1px solid #c8e9f2;
     border-radius: 12px;
 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
@@ -214,12 +213,12 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 }
 
 .card-busca:focus-within {
-    border-color: #7ab8ef;
-    box-shadow: 0 0 0 3px rgba(122, 184, 239, 0.2);
+    border-color: #308a96;
+    box-shadow: 0 0 0 3px rgba(48, 138, 150, 0.2);
 }
 
 .card-busca i {
-    color: #64748b;
+    color: #308a96;
     font-size: 20px;
 }
 
@@ -230,11 +229,11 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     outline: none;
     background: transparent;
     font-size: 15px;
-    color: #334155;
+    color: #223f45;
 }
 
 .card-busca input::placeholder {
-    color: #94a3b8;
+    color: #223f457e;
 }
 
 
@@ -258,14 +257,14 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     border-radius: 15px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-     background-color: #d9efff;
-     border: 1px solid #e2eaf2;
+     background-color: #c8e9f2;
+     border: 1px solid #a9d6e2;
 }
 
 .container-categorias h3 {
     margin-bottom: 5px;
 
-    color: #244766;
+    color: #223f45;
     font-size: 20px;
     font-weight: 700;
 }
@@ -283,8 +282,8 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     padding: 12px 14px;
     margin-bottom: 8px;
 
-    background-color: #f5f9fd;
-    color: #405a72;
+    background-color: #f4fbfd;
+    color: #223f45;
 
     border: 1px solid transparent;
     border-radius: 10px;
@@ -305,9 +304,9 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 }
 
 .card-categoria:hover {
-    background-color: #c5e5ff;
-    border-color: purple;
-    color: #244766;
+    background-color: #fff;
+    border-color: #fbcc58;
+    color: #223f45;
 }
 
 .card-categoria p {
@@ -317,7 +316,7 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 
 .container-filtro {
      padding-top: 20px;
-    border-top: 1px solid #e5edf4;
+    border-top: 1px solid #fbcc58;
 }
 
 
@@ -330,10 +329,10 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     margin: 8px 0 15px;
     padding: 0 12px;
 
-    background-color: #f9fbfd;
-    color: #244766;
+    background-color: #fff;
+    color: #223f45;
 
-    border: 1px solid #d7e2ec;
+    border: 1px solid #a9d6e2;
     border-radius: 9px;
 
     box-shadow: none;
@@ -349,8 +348,8 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 
     padding: 10px;
 
-    background-color: #1769aa;
-    color: #ffffff;
+    background-color: #fbcc58;
+    color: #223f45;
 
     border: none;
     border-radius: 9px;
@@ -364,13 +363,6 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     transition: background-color 0.2s, transform 0.2s;
 
 }
-
-
-
-
-
-
-
 
 
 
@@ -406,6 +398,9 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     width: 120px;
     height: 120px;
     border-radius: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background-color: #eaf7fa;
 
 }
 
@@ -443,16 +438,16 @@ form:has(#termos:not(:checked)) button[type="submit"] {
     height: 40px;
     border: none;
     cursor: pointer;
-    background-color: #5193d6;
+    background-color: #fbcc58;
     transition: background-color 0.2s;
 }
 
 .botao-perfil:hover {
-    background-color: #92b8dd;
+    background-color: #308a96;
 }
 
 .botao-perfil a {
-    color: black;
+    color: #223f45;
     text-decoration: none;
 }
 
@@ -463,7 +458,7 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 
 .preco strong {
     font-size: 1.3rem;
-    color: blue;
+    color: #308a96;
 }
 
 .container-categorias h3::before {
@@ -492,11 +487,11 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 }
 
 .card-avaliacao {
-    background-color: red;
     gap: 20px;
     padding: 50px;
     border-radius: 10px;
-    background-color: #a0c2e2;
+    background-color: #c8e9f2;
+    color: #223f45;
     transition: 0.3s;
 }
 
@@ -505,11 +500,110 @@ form:has(#termos:not(:checked)) button[type="submit"] {
 }
 
 
+.footer-site {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px 5% 18px;
+    box-sizing: border-box;
 
+    background-color: #308a96;
+    color: #ffffff;
+    text-align: center;
+}
 
+.footer-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
 
-header, nav, .navbar {
-    font-family: var(--bs-body-font-family) !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-marca h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: none;
+
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-redes a:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+.footer-final {
+    max-width: 1200px;
+    margin: 18px auto 0;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-final p {
+    margin: 0;
 }
 
 
+
+
+.container-filtro button:hover {
+    background-color: #308a96;
+    color: #fff;
+}
+
+.botao-perfil:hover,
+.botao-perfil:hover a {
+    color: #fff;
+}
+
+.container-usar h2 {
+    color: #223f45;
+}
