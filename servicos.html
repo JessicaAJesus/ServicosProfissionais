@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Servcaz Ltda</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/typeface-glacial-indifference@1.1.14/index.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="sobrenos.html" class="nav-link text-nowrap">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="servicos.html" class="nav-link active" aria-current="page">Serviços</a></li>
+                        <li class="nav-item"><a href="orcamento.html" class="nav-link text-nowrap">Solicite um
+                                Orçamento</a></li>
+                        <li class="nav-item"><a href="precos.html" class="nav-link text-nowrap">Tabela de Preços</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="container-principal">
+            <h2>Encontre o profissional ideal para seu serviço</h2>
+            <p>
+                Compare opções, conheça profissionais e encontre a pessoa ideal
+                para realizar seu próximo serviço.
+            </p>
+
+            <div class="card-busca">
+                <i class="bi bi-search"></i>
+                <input
+                    type="search"
+                    placeholder="Pesquise por serviço ou profissional..."
+                    aria-label="Pesquisar serviços ou profissionais"
+                >
+            </div>
+        </section>
+
+        <div class="container-2">
+
+            <aside class="container-categorias">
+                <h3>Categorias</h3>
+
+                <div class="card-categoria">
+                    <p>Limpeza</p>
+                </div>
+                <div class="card-categoria">
+                    <p>Construção</p>
+                </div>
+                <div class="card-categoria">
+                    <p>Jardinagem</p>
+                </div>
+                <div class="card-categoria">
+                    <p>Instalação</p>
+                </div>
+
+                <section class="container-filtro">
+                    <h3>Filtrar por preço</h3>
+
+                    <label for="preco-min">Preço mínimo</label>
+                    <input type="number" id="preco-min" placeholder="R$ 0" min="0">
+
+                    <label for="preco-max">Preço máximo</label>
+                    <input type="number" id="preco-max" placeholder="R$ 200" min="0">
+
+                    <button type="button">Aplicar filtros</button>
+                </section>
+            </aside>
+
+            <section class="lista-profissionais">
+
+                <article class="card-categorias">
+                    <div class="card-container">
+                        <div class="card-1">
+                            <img src="imagens/eletricista.png" alt="Ilustração de um eletricista com capacete, lâmpada e chave de fenda">
+                            <div class="card-perfil">
+                                <h3>Carlos Mendes</h3>
+                                <p>Função: Eletricista</p>
+                                <p>Localização: São Paulo, SP</p>
+                                <p>Avaliação: ★★★★★ 4.9/5.0</p>
+                                <div class="card-descricao">
+                                    <p>Realiza instalações elétricas, manutenção e reparos residenciais.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-preco">
+                            <p class="preco">A partir de <strong>R$ 80,00</strong></p>
+                            <a href="#" class="btn btn-primary botao-perfil">Ver perfil</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-categorias">
+                    <div class="card-container">
+                        <div class="card-1">
+                            <img src="imagens/faxineira.png" alt="Ilustração de uma diarista com vassoura e produto de limpeza">
+                            <div class="card-perfil">
+                                <h3>Ana Souza</h3>
+                                <p>Função: Diarista</p>
+                                <p>Localização: São Paulo, SP</p>
+                                <p>Avaliação: ★★★★☆ 4.8/5.0</p>
+                                <div class="card-descricao">
+                                    <p>Oferece serviços de limpeza residencial com atenção aos detalhes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-preco">
+                            <p class="preco">A partir de <strong>R$ 70,00</strong></p>
+                            <a href="#" class="btn btn-primary botao-perfil">Ver perfil</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-categorias">
+                    <div class="card-container">
+                        <div class="card-1">
+                            <img src="imagens/encanador.png" alt="Ilustração de uma encanadora com chave inglesa e desentupidor">
+                            <div class="card-perfil">
+                                <h3>Renata Lima</h3>
+                                <p>Função: Encanadora</p>
+                                <p>Localização: Belo Horizonte, MG</p>
+                                <p>Avaliação: ★★★★☆ 4.7/5.0</p>
+                                <div class="card-descricao">
+                                    <p>Realiza instalações hidráulicas, reparos de vazamentos e pequenas reformas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-preco">
+                            <p class="preco">A partir de <strong>R$ 90,00</strong></p>
+                            <a href="#" class="btn btn-primary botao-perfil">Ver perfil</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-categorias">
+                    <div class="card-container">
+                        <div class="card-1">
+                            <img src="imagens/lenhador.png" alt="Ilustração de um profissional com capacete, serra e martelo">
+                            <div class="card-perfil">
+                                <h3>Juliano Alves</h3>
+                                <p>Função: Instalador</p>
+                                <p>Localização: Campinas, SP</p>
+                                <p>Avaliação: ★★★★☆ 4.8/5.0</p>
+                                <div class="card-descricao">
+                                    <p>Realiza instalações e montagens em residências, com serra, martelo e acabamento.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-preco">
+                            <p class="preco">A partir de <strong>R$ 85,00</strong></p>
+                            <a href="#" class="btn btn-primary botao-perfil">Ver perfil</a>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+        </div>
+
+        <section class="container-usar">
+            <h2>Por que usar o Servcaz</h2>
+            <div class="container-profissionais">
+                <div class="card-avaliacao">
+                    <h3>Profissionais avaliados</h3>
+                    <p>Confira as avaliações de outros clientes antes de escolher um profissional.</p>
+                </div>
+                <div class="card-avaliacao">
+                    <h3>Mais praticidade</h3>
+                    <p>Encontre diferentes serviços em um só lugar, de forma simples e organizada.</p>
+                </div>
+                <div class="card-avaliacao">
+                    <h3>Variedade de serviços</h3>
+                    <p>Compare profissionais de diversas áreas e encontre opções adequadas às suas necessidades.</p>
+                </div>
+                <div class="card-avaliacao">
+                    <h3>Solicite orçamentos</h3>
+                    <p>Explique o que precisa e entre em contato com profissionais para consultar valores.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-site">
+        <div class="footer-conteudo">
+            <div class="footer-marca">
+                <h2>Servcaz</h2>
+            </div>
+            <div class="footer-redes">
+                <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="sobrenos.html">Sobre Nós</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="orcamento.html">Orçamento</a>
+                <a href="precos.html">Preços</a>
+            </div>
+        </div>
+        <div class="footer-final">
+            <p>&copy; 2026 Servcaz Ltda. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
