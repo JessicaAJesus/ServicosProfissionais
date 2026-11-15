@@ -134,12 +134,6 @@ strong {
     padding: 0 14px;
 }
 
-/* Alternância Pessoa Física / Pessoa Jurídica */
-#opcPF:checked ~ #camposPJ,
-#opcPJ:checked ~ #camposPF {
-    display: none;
-}
-
 /* Filtro por categoria na tabela de preços */
 #filtroLimpeza:checked ~ .categoria:not(#limpeza),
 #filtroConsertos:checked ~ .categoria:not(#consertos),
@@ -160,8 +154,8 @@ strong {
 }
 
 
-/* Adiciona asterisco vermelho nos labels de campos obrigatórios 
-    Só em Contato e Sobre o serviço (PF e PJ posteriormente com JS) */
+/* Adiciona asterisco vermelho nos labels de campos obrigatórios.
+    Vale também para os campos de PF e PJ, que recebem o atributo required pelo scripts.js */
 label:has(+ input[required]),
 label:has(+ select[required]),
 label:has(+ textarea[required]) {

@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós | Servcaz</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/typeface-glacial-indifference@1.1.14/index.css" rel="stylesheet">
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="lib/glacial-indifference/index.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 
@@ -40,17 +39,17 @@
     <main class="bg-info-subtle">
         <div class="container py-4">
             <div class="row justify-content-center">
-                <div class="col-lg-8 bg-body  p-5 rounded-4">
+                <article class="col-lg-8 bg-body  p-5 rounded-4">
 
                     <h1 class="marcatexto mb-4">Sobre Nós</h1>
 
                     <!-- Usamos uma row interna para separar imagem e texto lado a lado -->
-                    <div class="row align-items-center mb-4">
-                        <div class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
+                    <section class="row align-items-center mb-4">
+                        <figure class="col-md-6 order-md-2 mb-4 mb-md-0 text-center">
                             <!-- Imagem na coluna da direita em telas médias+ -->
                             <img src="imagens/ilustracaoTrabalhadoresjpg.jpg" class="img-fluid rounded shadow-sm"
                                 alt="Ilustração de limpeza e serviços">
-                        </div>
+                        </figure>
                         <div class="col-md-6 order-md-1">
                             <!-- Texto na coluna da esquerda -->
                             <p class="lead">A <strong>Servcaz</strong> nasceu da necessidade de simplificar a rotina de
@@ -59,32 +58,39 @@
                                 nossa empresa atua no mercado oferecendo soluções rápidas, seguras e de alta qualidade
                                 para manutenções e cuidados diários.</p>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- Demais seções continuam normalmente abaixo -->
-                    <h3 class="marcatexto mt-4">Nossa Missão</h3>
-                    <p>Facilitar o dia a dia dos nossos clientes por meio de um atendimento ágil e transparente,
-                        garantindo excelência em serviços de limpeza, reparos, jardinagem e instalações, sempre
-                        priorizando a segurança e a satisfação.</p>
+                    <section>
+                        <h3 class="marcatexto mt-4">Nossa Missão</h3>
+                        <p>Facilitar o dia a dia dos nossos clientes por meio de um atendimento ágil e transparente,
+                            garantindo excelência em serviços de limpeza, reparos, jardinagem e instalações, sempre
+                            priorizando a segurança e a satisfação.</p>
+                    </section>
 
-                    <h3 class="marcatexto mt-4">Nossa Visão</h3>
-                    <p>Ser a plataforma de referência regional em prestação de serviços residenciais e comerciais,
-                        reconhecida pela excelência operacional, confiança e valorização dos profissionais parceiros.
-                    </p>
+                    <section>
+                        <h3 class="marcatexto mt-4">Nossa Visão</h3>
+                        <p>Ser a plataforma de referência regional em prestação de serviços residenciais e comerciais,
+                            reconhecida pela excelência operacional, confiança e valorização dos profissionais
+                            parceiros.
+                        </p>
+                    </section>
 
-                    <h3 class="marcatexto mt-4">Nossos Valores</h3>
-                    <ul>
-                        <li><strong>Confiança e Segurança:</strong> Rigor na seleção dos profissionais para garantir
-                            tranquilidade ao receber alguém em sua casa ou escritório.</li>
-                        <li><strong>Qualidade:</strong> Compromisso com o acabamento e a eficiência em cada serviço
-                            executado.</li>
-                        <li><strong>Transparência:</strong> Preços justos, comunicação clara e cumprimento de prazos.
-                        </li>
-                        <li><strong>Praticidade:</strong> Facilidade na contratação e soluções sob medida para o seu dia
-                            a dia.</li>
-                    </ul>
+                    <section>
+                        <h3 class="marcatexto mt-4">Nossos Valores</h3>
+                        <ul>
+                            <li><strong>Confiança e Segurança:</strong> Rigor na seleção dos profissionais para garantir
+                                tranquilidade ao receber alguém em sua casa ou escritório.</li>
+                            <li><strong>Qualidade:</strong> Compromisso com o acabamento e a eficiência em cada serviço
+                                executado.</li>
+                            <li><strong>Transparência:</strong> Preços justos, comunicação clara e cumprimento de prazos.
+                            </li>
+                            <li><strong>Praticidade:</strong> Facilidade na contratação e soluções sob medida para o seu dia
+                                a dia.</li>
+                        </ul>
+                    </section>
 
-                </div>
+                </article>
             </div>
         </div>
     </main>
@@ -115,9 +121,7 @@
     </footer>
 
     <!-- Script JS Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,100 @@
+{
+  "limpeza": [
+    {
+      "servico": "Limpeza residencial",
+      "descricao": "Higienização completa de cômodos, banheiros e cozinha.",
+      "unidade": "Diária",
+      "preco": 180
+    },
+    {
+      "servico": "Limpeza pós-obra",
+      "descricao": "Remoção de resíduos, tintas e poeira fina.",
+      "unidade": "m²",
+      "preco": 20
+    },
+    {
+      "servico": "Limpeza de escritório",
+      "descricao": "Limpeza e desinfecção de mesas, pisos e áreas comuns.",
+      "unidade": "Visita",
+      "preco": 220
+    },
+    {
+      "servico": "Higienização de estofados",
+      "descricao": "Limpeza a seco ou com extração de sofás e colchões.",
+      "unidade": "Peça",
+      "preco": 150
+    }
+  ],
+  "consertos": [
+    {
+      "servico": "Reparo hidráulico",
+      "descricao": "Vazamentos, troca de torneiras, sifões e registros.",
+      "unidade": "Visita",
+      "preco": 120
+    },
+    {
+      "servico": "Reparo elétrico",
+      "descricao": "Troca de tomadas, interruptores e disjuntores.",
+      "unidade": "Visita",
+      "preco": 130
+    },
+    {
+      "servico": "Pequenos reparos",
+      "descricao": "Ajuste de portas, dobradiças, fechaduras e gesso.",
+      "unidade": "Hora",
+      "preco": 70
+    }
+  ],
+  "jardinagem": [
+    {
+      "servico": "Corte de grama",
+      "descricao": "Corte e recolhimento de resíduos.",
+      "unidade": "m²",
+      "preco": 2.5
+    },
+    {
+      "servico": "Poda de arbustos",
+      "descricao": "Poda de formação e manutenção de cercas-vivas.",
+      "unidade": "Hora",
+      "preco": 65
+    },
+    {
+      "servico": "Manutenção mensal",
+      "descricao": "Visitas periódicas com rega, adubação e limpeza.",
+      "unidade": "Mês",
+      "preco": 280
+    }
+  ],
+  "instalacao": [
+    {
+      "servico": "Montagem de móveis",
+      "descricao": "Guarda-roupas, estantes, camas e mesas.",
+      "unidade": "Móvel",
+      "preco": 90
+    },
+    {
+      "servico": "Fixação de suportes",
+      "descricao": "TVs, prateleiras, nichos e quadros.",
+      "unidade": "Item",
+      "preco": 80
+    },
+    {
+      "servico": "Instalação de luminárias",
+      "descricao": "Pendentes, plafons e spots, com teste de funcionamento.",
+      "unidade": "Ponto",
+      "preco": 80
+    },
+    {
+      "servico": "Instalação de eletrodomésticos",
+      "descricao": "Fogões, coifas e máquinas de lavar.",
+      "unidade": "Aparelho",
+      "preco": 150
+    },
+    {
+      "servico": "Instalação de ar-condicionado split",
+      "descricao": "Split de até 12.000 BTUs, com até 3 m de tubulação, vácuo e teste.",
+      "unidade": "Aparelho",
+      "preco": 650
+    }
+  ]
+}
