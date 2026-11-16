@@ -423,6 +423,7 @@ document.addEventListener('DOMContentLoaded', carregarTabelaPrecos);
 
 /* PÁGINA DE SERVIÇOS (FILTROS E BUSCA) */
 
+/* Remove acentos e padroniza em minúsculas para facilitar a comparação na busca */
 function normalizarTexto(texto) {
     return texto
         .toLowerCase()
@@ -430,12 +431,14 @@ function normalizarTexto(texto) {
         .replace(/[\u0300-\u036f]/g, '');
 }
 
+/* Inicializa os eventos de busca e filtragem da página de serviços */
 function iniciarFiltroServicos() {
     var lista = document.getElementById('listaProfissionais');
     if (!lista) {
-        return;
+        return; /* evita execução nas outras páginas que não possuem essa listagem */
     }
 
+    /* Referências aos elementos de entrada, botões e cards do DOM */
     var campoBusca = document.getElementById('campoBusca');
     var inputMin = document.getElementById('preco-min');
     var inputMax = document.getElementById('preco-max');
@@ -446,6 +449,7 @@ function iniciarFiltroServicos() {
 
     var categoriaSelecionada = '';
 
+    /* Avalia todos os critérios (categoria, faixa de preço e busca) e atualiza a exibição dos cards */
     function filtrarProfissionais() {
         var termoBusca = campoBusca ? normalizarTexto(campoBusca.value.trim()) : '';
         var precoMin = inputMin && inputMin.value !== '' ? parseFloat(inputMin.value) : 0;
@@ -453,10 +457,12 @@ function iniciarFiltroServicos() {
         var visiveis = 0;
 
         cards.forEach(function (card) {
+            /* Lê os metadados configurados nos atributos data-* de cada profissional */
             var categoriaCard = card.getAttribute('data-categoria');
             var precoCard = parseFloat(card.getAttribute('data-preco'));
             var textoCard = normalizarTexto(card.textContent);
 
+            /* Verifica se o card atende simultaneamente aos três critérios */
             var bateCategoria = !categoriaSelecionada || categoriaCard === categoriaSelecionada;
             var batePreco = precoCard >= precoMin && precoCard <= precoMax;
             var bateBusca = !termoBusca || textoCard.indexOf(termoBusca) !== -1;
@@ -469,6 +475,7 @@ function iniciarFiltroServicos() {
             }
         });
 
+        /* Exibe o aviso caso nenhum profissional corresponda aos filtros */
         if (avisoVazio) {
             avisoVazio.hidden = visiveis > 0;
         }
@@ -503,4 +510,5 @@ function iniciarFiltroServicos() {
     }
 }
 
+/* Executa a inicialização assim que o HTML terminar de carregar */
 document.addEventListener('DOMContentLoaded', iniciarFiltroServicos);
