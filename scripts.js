@@ -420,3 +420,87 @@ function carregarTabelaPrecos() {
 
 /* Chama a requisição assim que o HTML da página termina de carregar */
 document.addEventListener('DOMContentLoaded', carregarTabelaPrecos);
+
+/* PÁGINA DE SERVIÇOS (FILTROS E BUSCA) */
+
+function normalizarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+}
+
+function iniciarFiltroServicos() {
+    var lista = document.getElementById('listaProfissionais');
+    if (!lista) {
+        return;
+    }
+
+    var campoBusca = document.getElementById('campoBusca');
+    var inputMin = document.getElementById('preco-min');
+    var inputMax = document.getElementById('preco-max');
+    var btnAplicar = document.getElementById('btnAplicarFiltros');
+    var botoesCategoria = document.querySelectorAll('#filtroCategorias .card-categoria');
+    var cards = lista.querySelectorAll('article[data-categoria]');
+    var avisoVazio = document.getElementById('semResultados');
+
+    var categoriaSelecionada = '';
+
+    function filtrarProfissionais() {
+        var termoBusca = campoBusca ? normalizarTexto(campoBusca.value.trim()) : '';
+        var precoMin = inputMin && inputMin.value !== '' ? parseFloat(inputMin.value) : 0;
+        var precoMax = inputMax && inputMax.value !== '' ? parseFloat(inputMax.value) : Infinity;
+        var visiveis = 0;
+
+        cards.forEach(function (card) {
+            var categoriaCard = card.getAttribute('data-categoria');
+            var precoCard = parseFloat(card.getAttribute('data-preco'));
+            var textoCard = normalizarTexto(card.textContent);
+
+            var bateCategoria = !categoriaSelecionada || categoriaCard === categoriaSelecionada;
+            var batePreco = precoCard >= precoMin && precoCard <= precoMax;
+            var bateBusca = !termoBusca || textoCard.indexOf(termoBusca) !== -1;
+
+            var mostrar = bateCategoria && batePreco && bateBusca;
+            card.hidden = !mostrar;
+
+            if (mostrar) {
+                visiveis++;
+            }
+        });
+
+        if (avisoVazio) {
+            avisoVazio.hidden = visiveis > 0;
+        }
+    }
+
+    /* Seleção de categoria (clicar na mesma categoria desmarca o filtro) */
+    botoesCategoria.forEach(function (botao) {
+        botao.addEventListener('click', function () {
+            var categoria = botao.getAttribute('data-categoria');
+
+            if (categoriaSelecionada === categoria) {
+                categoriaSelecionada = '';
+                botao.classList.remove('ativo');
+            } else {
+                botoesCategoria.forEach(function (b) {
+                    b.classList.remove('ativo');
+                });
+                categoriaSelecionada = categoria;
+                botao.classList.add('ativo');
+            }
+        });
+    });
+
+    /* Botão "Aplicar filtros" aplica categoria + preço */
+    if (btnAplicar) {
+        btnAplicar.addEventListener('click', filtrarProfissionais);
+    }
+
+    /* Barra de busca filtra em tempo real conforme digita */
+    if (campoBusca) {
+        campoBusca.addEventListener('input', filtrarProfissionais);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', iniciarFiltroServicos);
